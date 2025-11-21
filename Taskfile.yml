@@ -1,0 +1,65 @@
+version: 3
+
+
+tasks:
+  default:
+    deps:
+      - deploy
+
+  clean:
+    cmds:
+      - rm -rf html/*
+
+  deploy:
+    deps:
+      - build
+    cmds:
+      - rm -rf /home/danielpt/Documents/testSite/*
+      - cp -r html/* /home/danielpt/Documents/testSite/
+
+  build:
+    deps:
+      - all_markdown
+      # - all_notebooks
+    cmds:
+      - rm -f media/*
+      - cp resources/* html/
+
+  build_markdown:*:
+    run: always
+    vars:
+      FILENAME: "{{index .MATCH 0}}"
+    sources:
+      - "src/{{.FILENAME}}.md"
+      - header.html
+    generates:
+      - "html/{{.FILENAME}}.html"
+    cmd: pandoc -s src/{{.FILENAME}}.md -o html/{{.FILENAME}}.html -c stylesheet.css -B src/header.html -C --bibliography=src/references.bib --mathml -M link-citations=True
+
+  build_notebook:*:
+    run: always
+    vars:
+      FILENAME: "{{index .MATCH 0}}"
+    sources:
+      - "src/{{.FILENAME}}.ipynb"
+      - header.html
+    generates:
+      - "html/{{.FILENAME}}.html"
+    cmd: pandoc -s src/{{.FILENAME}}.ipynb -o html/{{.FILENAME}}.html -c stylesheet.css --extract-media media/ -B src/header.html
+
+  all_markdown:
+    vars:
+      MDFILES:
+        sh: ls src/*.md
+    cmds:
+      - for: { var: MDFILES }
+        task: build_markdown:{{.ITEM | trimPrefix "src/" | trimSuffix ".md"}}
+
+  all_notebooks:
+    vars:
+      NBFILES:
+        sh: ls src/*.ipynb
+    cmds:
+      - for: { var: NBFILES }
+        task: build_notebook:{{.ITEM | trimPrefix "src/" | trimSuffix ".ipynb"}}
+      - cp -r media html

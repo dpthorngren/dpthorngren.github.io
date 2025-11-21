@@ -1,0 +1,125 @@
+html {
+    background-image: url("saturn.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    overflow-y: scroll;
+}
+
+body {
+    width: 90%;
+    max-width: 42em;
+    margin: 20pt auto 20pt auto ;
+    background: #FBEEE9F3;
+    border: 2px solid #063042;
+    border-radius: 20px;
+    color: #063042;
+    text-align: justify;
+    padding: 20pt;
+}
+
+#nav {
+    font-size: 20pt;
+    color: #004C75;
+    text-decoration: none;
+}
+#nav:hover {
+    text-decoration: underline;
+}
+
+#sideimg {
+    display: inline-flex;
+    float: right;
+    max-width: 40%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0pt 10pt;
+}
+
+#portrait {
+    display: inline-flex;
+    float: right;
+    max-width: 35%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0pt 10pt;
+}
+
+#refs {
+    font-size: 10pt;
+    text-align: left;
+}
+
+footer {
+    font-size: 12pt;
+    text-align: center;
+}
+
+li {
+    padding: 4pt;
+}
+
+p {
+    line-height: 1.4;
+    margin: 0.5em 0em;
+}
+
+h1 {
+    text-align: center;
+    color: #004C75;
+    margin: 0.3em 0em 0em 0em;
+}
+
+h2 {
+    text-align: left;
+    color: #004C75;
+    margin: 0.3em 0em 0em 0em;
+}
+
+pre {
+    margin: 0pt;
+}
+
+a {
+    color: #004C75;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.cell {
+    margin: 2pt 0pt;
+    overflow: hidden;
+}
+
+p > code {
+    background: rgba(0,0,0, .1);
+}
+
+div.sourceCode, pre.verbatim {
+    background: rgba(0,0,0,.1);
+    border: 2px solid grey;
+    border-radius: 5pt;
+    margin: 0.5em 1em;
+    padding: 2pt 5pt;
+    font-size: 12pt;
+}
+
+.output {
+    padding: 2pt 5pt;
+    font-size: 12pt;
+}
+
+.stderr {
+    background: rgba(200,0,0,.1);
+    font-size: 12pt;
+}
