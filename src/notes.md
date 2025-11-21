@@ -4,8 +4,8 @@ This is a collection of notes about various science and programming topics of in
 
 Scientific Python
 --------------------
-- [Basic Numpy](index.html) -- A brief introduction to Numpy, the core Python package for scientific computing.  It assumes you know basic Python.
-- [Basic Matplotlib](matplotlib.html) -- Making plots with Matplotlib, including tuning the details of the style.  Read basic Numpy first, if needed.
+<!-- - [Basic Numpy](index.html) -- A brief introduction to Numpy, the core Python package for scientific computing.  It assumes you know basic Python. -->
+<!-- - [Basic Matplotlib](matplotlib.html) -- Making plots with Matplotlib, including tuning the details of the style.  Read basic Numpy first, if needed. -->
 - [Python Packages](pythonPackages.html) -- How to create a Python package, including file structure and the setup system.
 
 Statistics and Math

@@ -1,4 +1,4 @@
-<img src="portrait.jpg" id="portrait" alt="Photo of Daniel Thorngren"/>
+<a href="portrait.jpg"><img src="portrait.jpg" id="portrait" alt="Photo of Daniel Thorngren"/></a>
 
 Daniel Thorngren
 ====================
@@ -23,8 +23,9 @@ I am a postdoctoral fellow in the Department of Physics and Astronomy at Johns H
 
 These are exciting times for exoplanetary science. Thanks to observing programs like [Kepler](https://science.nasa.gov/mission/kepler/), [CoRoT](https://www.esa.int/Science_Exploration/Space_Science/Corot_overview), and many others, a myriad of discoveries have been made since the [first confirmed discovery in 1992](https://en.wikipedia.org/wiki/PSR_B1257%2B12). These have presented us with types of planets [not](https://en.wikipedia.org/wiki/Super-Earth) [seen](https://en.wikipedia.org/wiki/Hot_Jupiter) in the solar system and many fascinating questions. Why are hot Jupiters so large? What are these planets composed of? How does planet formation work? How unusual is the solar system? Can any of these planets support life? Do they?
 
-Giant planets, though not habitable themselves, can help with contextualizing and answering these questions. These objects were likely critical in shaping the planetary systems they are found in, and provide a record of the composition of the disk they formed in. Their [TTVs](https://en.wikipedia.org/wiki/Transit-timing_variation) can reveal smaller planets and help constrain the properties of those already observed. They may even have [moons](https://en.wikipedia.org/wiki/Exomoon) which could shelter life (though no discoveries of exomoons have yet been confirmed). Of course, there is also much left to learn about giant planets themselves. Thanks to missions like [Juno](https://www.jpl.nasa.gov/missions/juno/), [Cassini](https://saturn.jpl.nasa.gov/), and [TESS](https://tess.gsfc.nasa.gov/), we are in a position to dramatically improve our understanding of them as well over the coming years.
+Giant planets, though not habitable themselves, can help with contextualizing and answering these questions. These objects were likely critical in shaping the planetary systems they are found in, and provide a record of the composition of the disk they formed in. Their [TTVs](https://en.wikipedia.org/wiki/Transit-timing_variation) can reveal smaller planets and help constrain the properties of those already observed. They may even have [moons](https://en.wikipedia.org/wiki/Exomoon) which could shelter life (though no discoveries of exomoons have yet been confirmed). Of course, there is also much left to learn about giant planets themselves. Thanks to missions like [Juno](https://www.jpl.nasa.gov/missions/juno/), [TESS](https://tess.gsfc.nasa.gov/), and [JWST](https://science.nasa.gov/mission/webb/) we are in a position to dramatically improve our understanding of them as well over the coming years.
 
+<hr>
 <footer>
 [Background Image](https://www.jpl.nasa.gov/images/pia14631-dwarfed-by-saturn/) Courtesy NASA/JPL-Caltech/Space Science Institute
 </footer>
