@@ -4,13 +4,13 @@ version: 3
 tasks:
   default:
     deps:
-      - deploy
+      - deploy_local
 
   clean:
     cmds:
       - rm -rf html/*
 
-  deploy:
+  deploy_local:
     deps:
       - build
     cmds:

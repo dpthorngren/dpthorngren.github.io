@@ -1,0 +1,43 @@
+name: Build Site
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: docker://pandoc/core:3.8
+    - uses: go-task/setup-task@v1
+    - uses: actions/checkout@v4
+
+    - name: Build
+      run: |
+        mkdir html
+        task build
+
+    - name: Upload Artifacts
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: html/
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
