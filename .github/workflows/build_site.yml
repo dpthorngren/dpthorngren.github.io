@@ -11,9 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: docker://pandoc/core:3.8
-    - uses: go-task/setup-task@v1
-    - uses: actions/checkout@v4
+    - name: Install Pandoc
+      uses: pandoc/actions/setup@v1
+      with:
+        version: 3.8
+    - name: Install Task
+      uses: go-task/setup-task@v1
+    - name: Checkout code
+      uses: actions/checkout@v4
 
     - name: Build
       run: |
