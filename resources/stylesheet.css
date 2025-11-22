@@ -4,21 +4,89 @@ html {
     background-repeat: no-repeat;
     background-color: black;
     background-attachment: fixed;
+    overflow-y: scroll;
     font-family: Arial, sans-serif;
     font-size: 14pt;
-    overflow-y: scroll;
 }
 
 body {
-    width: 90%;
-    max-width: 42em;
-    margin: 20pt auto 20pt auto ;
+    width: 86%;
+    max-width: 720px;
     background: #FBEEE9F3;
     border: 2px solid #063042;
     border-radius: 20px;
+    margin: 20pt auto 20pt auto;
+    padding: 20pt;
     color: #063042;
     text-align: justify;
-    padding: 20pt;
+}
+
+h1 {
+    margin: 0.3em 0em 0em 0em;
+    color: #004C75;
+    text-align: center;
+}
+
+h2 {
+    margin: 0.3em 0em 0em 0em;
+    color: #004C75;
+    text-align: left;
+}
+
+p {
+    margin: 0.5em 0em;
+    line-height: 1.4;
+}
+
+li {
+    padding: 4pt;
+}
+
+pre {
+    margin: 0pt;
+}
+
+a {
+    color: #004C75;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    font-size: 12pt;
+}
+
+p > code {
+    background: rgba(0, 0, 0, .1);
+}
+
+div.sourceCode, pre.verbatim {
+    background: rgba(0, 0, 0, .1);
+    border: 2px solid grey;
+    border-radius: 5pt;
+    margin: 0.5em 1em;
+    padding: 2pt 5pt;
+    font-size: 12pt;
+}
+
+.cell {
+    margin: 2pt 0pt;
+    overflow: hidden;
+}
+
+.output {
+    padding: 2pt 5pt;
+    font-size: 12pt;
+}
+
+.stderr {
+    background: rgba(200, 0, 0, .1);
+    font-size: 12pt;
 }
 
 #nav {
@@ -26,8 +94,14 @@ body {
     color: #004C75;
     text-decoration: none;
 }
+
 #nav:hover {
     text-decoration: underline;
+}
+
+#refs {
+    font-size: 10pt;
+    text-align: left;
 }
 
 #sideimg {
@@ -50,76 +124,17 @@ body {
     margin: 0pt 10pt;
 }
 
-#refs {
-    font-size: 10pt;
-    text-align: left;
-}
+/* Overrides for narrow screens */
+@media screen and (max-width: 720px) {
+    #sideimg {
+        display: block;
+        float: none;
+        margin: auto;
+    }
 
-footer {
-    font-size: 12pt;
-    text-align: center;
-}
-
-li {
-    padding: 4pt;
-}
-
-p {
-    line-height: 1.4;
-    margin: 0.5em 0em;
-}
-
-h1 {
-    text-align: center;
-    color: #004C75;
-    margin: 0.3em 0em 0em 0em;
-}
-
-h2 {
-    text-align: left;
-    color: #004C75;
-    margin: 0.3em 0em 0em 0em;
-}
-
-pre {
-    margin: 0pt;
-}
-
-a {
-    color: #004C75;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-.cell {
-    margin: 2pt 0pt;
-    overflow: hidden;
-}
-
-p > code {
-    background: rgba(0,0,0, .1);
-}
-
-div.sourceCode, pre.verbatim {
-    background: rgba(0,0,0,.1);
-    border: 2px solid grey;
-    border-radius: 5pt;
-    margin: 0.5em 1em;
-    padding: 2pt 5pt;
-    font-size: 12pt;
-}
-
-.output {
-    padding: 2pt 5pt;
-    font-size: 12pt;
-}
-
-.stderr {
-    background: rgba(200,0,0,.1);
-    font-size: 12pt;
+    #portrait {
+        display: block;
+        float: none;
+        margin: auto;
+    }
 }
