@@ -82,21 +82,39 @@ div.sourceCode, pre.verbatim {
 .output {
     padding: 2pt 5pt;
     font-size: 12pt;
+    border-left: 2px solid silver;
 }
 
 .stderr {
-    background: rgba(200, 0, 0, .1);
+    border-left: rgba(100, 0, 0, .1);
     font-size: 12pt;
 }
 
-#nav {
+p > img {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+table {
+    width: 100%;
     font-size: 20pt;
     color: #004C75;
     text-decoration: none;
 }
 
+#nav {
+    text-decoration: none;
+}
+
 #nav:hover {
     text-decoration: underline;
+}
+
+#right {
+    text-align: right;
 }
 
 #refs {
@@ -122,6 +140,13 @@ div.sourceCode, pre.verbatim {
     border: 2px solid black;
     border-radius: 5px;
     margin: 0pt 10pt;
+}
+
+#logo {
+    height: 20pt;
+    width: auto;
+    padding: 0pt;
+    margin: 0pt, 20pt;
 }
 
 /* Overrides for narrow screens */
