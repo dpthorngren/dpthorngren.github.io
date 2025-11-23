@@ -1,3 +1,9 @@
+---
+pagetitle: D.P. Thorngren
+author: D.P. Thorngren
+lang: en-US
+---
+
 <a href="portrait.jpg"><img src="portrait.jpg" id="portrait" alt="Photo of Daniel Thorngren"/></a>
 
 Daniel Thorngren

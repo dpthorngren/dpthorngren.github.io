@@ -1,10 +1,13 @@
+---
+pagetitle: Research -- D.P. Thorngren
+author: D.P. Thorngren
+lang: en-US
+link-citations: True
+---
+
 Research
 ====================
-I got into research as an undergraduate at UC Davis with [Prof. Tripathi](https://physics.ucdavis.edu/people/faculty/sudhindra-tripathi), working on simulation software for the [LUX dark matter detector](https://sites.brown.edu/luxdarkmatter/experiment/).  My senior thesis work sped up the simulation significantly by bypassing photon propagation calculations, instead probabilistically distributing them to the various detectors based on the position they were generated.  This work contributed to **@Szydagis2013** and established a strong computational theme to my research interests.
-
-In graduate school at UCSC, I worked on connecting giant planet physics with their observed properties with my advisor [Jonathan Fortney](https://jfortney.sites.ucsc.edu/).  This work branched into a variety of related topics extending into my postdoctoral work, so I'll organize them that way rather than strictly by date.  This research principally relies on planetary interior structure models and Bayesian statistics.
-
-Note: Articles on which I am an author are bolded.
+Since a complete list of my publications can be found on the [NASA/SAO ADS](https://ui.adsabs.harvard.edu/search/q=Thorngren%2C%20Daniel%20property%3Arefereed) as well as my [CV](thorngrenCV.pdf), I'll organize this page by research topic rather than date or number of citations.  Papers on which I am an author are **bolded**, and the bibliography at the bottom of this page links to the papers themeslves.
 
 Giant Planet Compositions
 --------------------

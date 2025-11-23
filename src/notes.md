@@ -1,3 +1,9 @@
+---
+pagetitle: Notes -- D.P. Thorngren
+author: D.P. Thorngren
+lang: en-US
+---
+
 Notes
 ====================
 This is a collection of notes about various science and programming topics of interest to me.  It's mostly here so I can reuse the stuff I write for students and collaborators, but if anyone else gets use out of it that's great too.  For good measure I've mixed in external references that I found useful, marked with ⇱.  Let me know if you spot any errors.
