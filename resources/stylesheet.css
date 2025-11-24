@@ -2,6 +2,7 @@ html {
     background-image: url("saturn.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top right;
     background-color: black;
     background-attachment: fixed;
     overflow-y: scroll;
@@ -151,6 +152,10 @@ table {
 
 /* Overrides for narrow screens */
 @media screen and (max-width: 720px) {
+    html {
+        background-size: contain;
+    }
+
     #sideimg {
         display: block;
         float: none;

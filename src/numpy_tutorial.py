@@ -48,7 +48,7 @@ y = 2.5 + 3 * np.sin(2.5 * x)
 print(y)
 
 # %% [markdown]
-# Numpy has a *ton* of [fuctions](https://numpy.org/doc/stable/reference/routines.math.html) for these operations.  If you can't find something you're looking for, you can find even more functions in `scipy.special` (see [here](https://docs.scipy.org/doc/scipy/reference/special.html)).  Some examples are
+# Numpy has a *ton* of [functions](https://numpy.org/doc/stable/reference/routines.math.html) for these operations.  If you can't find something you're looking for, you can find even more functions in `scipy.special` (see [here](https://docs.scipy.org/doc/scipy/reference/special.html)).  Some examples are
 # - `np.sin`, `np.cos`, `np.cot`, `np.arctanh`...
 # - `np.exp`, `np.log`, `np.log10`...
 # - `np.sqrt`, `np.cbrt`, `np.fabs`, `np.sign`...
@@ -68,7 +68,7 @@ print(y[2])
 # %% [markdown]
 # Data Types and Comparisons
 # --------------------
-# Numpy supports [more datatypes](https://numpy.org/doc/stable/reference/arrays.scalars.html#built-in-scalar-types) than just the double-precision floats we've defaulted to so far, such as integers, complex numbers, strings, and booleans.  You can specify which datatype you want when you create an array, or use `np.astype` to change the type afterwards.  Complex numbers (Numpy, like C, calls them cdouble) are actually a built in part of python, so you can specify imaginary numbers by adding `j` to the end of a number, e.g. `3.5j` and `1 + .5j`.
+# Numpy supports [more data types](https://numpy.org/doc/stable/reference/arrays.scalars.html#built-in-scalar-types) than just the double-precision floats we've defaulted to so far, such as integers, complex numbers, strings, and booleans.  You can specify which datatype you want when you create an array, or use `np.astype` to change the type afterwards.  Complex numbers (Numpy, like C, calls them cdouble) are actually a built in part of python, so you can specify imaginary numbers by adding `j` to the end of a number, e.g. `3.5j` and `1 + .5j`.
 
 # %%
 cx = np.linspace(-3, 3, 5, dtype="cdouble")
@@ -120,7 +120,7 @@ np.mean(x, axis=1)
 # %% [markdown]
 # Broadcasting and Slicing
 # --------------------
-# To do an operation involving two Numpy arrays, they need to have compatible shapes.  The simplest way to do this is for them to have the same shape, but Numpy has some rules for more compicated situations it calls [broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html).  They are:
+# To do an operation involving two Numpy arrays, they need to have compatible shapes.  The simplest way to do this is for them to have the same shape, but Numpy has some rules for more complicated situations it calls [broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html).  They are:
 #
 # 1. If the number of dimensions differs, implicitly add length-one dimensions to start of the lower-dimension array's shape until they match.  E.g. (5,) -> (1, 1, 5) if 3 dimensions are needed.
 # 2. If the length of each dimension matches, operate on them element-wise (like a for loop does).  If instead one array's length in that dimension is 1, reuse it for every element of the other array.
@@ -171,7 +171,7 @@ print(x[:, np.newaxis] * x)
 # --------------------
 # There's a lot of interesting things you can do with multidimensional arrays, but linear algebra is central enough that I'll discuss it here (but here's the [Numpy linalg documentation](https://numpy.org/doc/stable/reference/routines.linalg.html) for good measure).
 #
-# Starting things off, the symbol for matrix multipliaction is "@" (they were scraping the bottom of the barrel on symbols):
+# Starting things off, the symbol for matrix multiplication is "@" (they were scraping the bottom of the barrel on symbols):
 
 # %%
 M = np.random.rand(3, 4)
