@@ -61,7 +61,7 @@ footer {
     font-size: 12pt;
 }
 
-p > code {
+p > code, li > code {
     background: rgba(0, 0, 0, .1);
 }
 

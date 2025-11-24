@@ -18,34 +18,13 @@ tasks:
       - cp -r html/* /home/danielpt/Documents/testSite/
 
   build:
-    deps:
-      - all_markdown
-      # - all_notebooks
     cmds:
-      - rm -f media/*
+      - mkdir -p html/media
+      - mv html/media media
+      - task: all_markdown
+      - task: all_notebooks
       - cp resources/* html/
-
-  build_markdown:*:
-    run: always
-    vars:
-      FILENAME: "{{index .MATCH 0}}"
-    sources:
-      - "src/{{.FILENAME}}.md"
-      - header.html
-    generates:
-      - "html/{{.FILENAME}}.html"
-    cmd: pandoc -s src/{{.FILENAME}}.md -o html/{{.FILENAME}}.html -c stylesheet.css -B src/header.html -C --bibliography=src/references.bib --mathml -M link-citations=True
-
-  build_notebook:*:
-    run: always
-    vars:
-      FILENAME: "{{index .MATCH 0}}"
-    sources:
-      - "src/{{.FILENAME}}.ipynb"
-      - header.html
-    generates:
-      - "html/{{.FILENAME}}.html"
-    cmd: pandoc -s src/{{.FILENAME}}.ipynb -o html/{{.FILENAME}}.html -c stylesheet.css --extract-media media/ -B src/header.html
+      - mv media html/media
 
   all_markdown:
     vars:
@@ -58,8 +37,40 @@ tasks:
   all_notebooks:
     vars:
       NBFILES:
-        sh: ls src/*.ipynb
+        sh: ls src/*.py
     cmds:
       - for: { var: NBFILES }
-        task: build_notebook:{{.ITEM | trimPrefix "src/" | trimSuffix ".ipynb"}}
-      - cp -r media html
+        task: build_notebook:{{.ITEM | trimPrefix "src/" | trimSuffix ".py"}}
+
+  build_markdown:*:
+    vars:
+      FILENAME: "{{index .MATCH 0}}"
+    sources:
+      - "src/{{.FILENAME}}.md"
+      - "src/header.html"
+    generates:
+      - "html/{{.FILENAME}}.html"
+    cmd: pandoc -s src/{{.FILENAME}}.md -o html/{{.FILENAME}}.html -c stylesheet.css -B src/header.html -C --bibliography=src/references.bib --mathml
+
+  convert_notebook*:
+    vars:
+      FILENAME: "{{index .MATCH 0}}"
+    sources:
+      - "src/{{.FILENAME}}.py"
+    generates:
+      - "html/{{.FILENAME}}.ipynb"
+    cmds:
+      - jupytext src/{{.FILENAME}}.py --execute -o html/{{.FILENAME}}.ipynb
+
+  build_notebook:*:
+    vars:
+      FILENAME: "{{index .MATCH 0}}"
+    deps:
+      - convert_notebook{{.FILENAME}}
+    sources:
+      - "html/{{.FILENAME}}.ipynb"
+      - "src/header.html"
+    generates:
+      - "html/{{.FILENAME}}.html"
+    cmds:
+      - pandoc -s html/{{.FILENAME}}.ipynb -o html/{{.FILENAME}}.html -c stylesheet.css --extract-media media/ -B src/header.html -M title="{{.FILENAME | replace "_" " " | title}}"

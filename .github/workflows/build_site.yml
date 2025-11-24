@@ -15,12 +15,24 @@ jobs:
       uses: pandoc/actions/setup@v1
       with:
         version: 3.8
+
     - name: Install Task
       uses: go-task/setup-task@v1
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Build
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install -r requirements.txt 
+
+    - name: Build Site
       run: |
         mkdir html
         task build

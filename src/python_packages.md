@@ -1,5 +1,16 @@
+---
+pagetitle: Python Packages
+author: D.P. Thorngren
+lang: en-US
+---
+
 Python Packages
 ====================
+
+- [Setuptools documentation](https://setuptools.pypa.io/en/latest/setuptools.html)
+- [Pytest Documentation](https://docs.pytest.org/en/stable/)
+- [Cython Compilation Guide](https://cython.readthedocs.io/en/stable/src/userguide/source_files_and_compilation.html)
+
 There are other ways to structure Python packages, but this is how I like to do it.  I'm using the `src/` layout, a package-root tests folder, and `setup.cfg` (primarily) for as much compatibility as I can manage.  I'm also assuming you're using Git and intend for other people to use the package.
 
 File Structure
@@ -109,9 +120,3 @@ Other Files
 1. The Readme.md file is a nice way to store basic information about the package: installation, usage, notes, and so on.  If you're using Github, this will be rendered on the repository's home page.  If you aren't using Github, the only real advantages is that the [markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) is fairly convenient and it's a file other people may be used to looking for.
 2. The license file is required so that other people can legally use your code.  Admittedly, some people ignore this (especially AI companies looking for data to train on), but that doesn't mean we should encourage such things.  Apparently, the legal issues can get *weird* if you have multiple contributors but no license.  I am not a lawyer and you probably aren't either, so you should just use an existing well-established license.  Github can suggest some based on your needs, or [see here](https://choosealicense.com/).
 3. The .gitignore file tells git which files it can ignore for version tracking purposes.  This can be helpful for not worrying about random setup byproducts or Python cache files.  The documentation is [here](https://git-scm.com/docs/gitignore) but at it's core it's just a list of patterns to ignore, with a * as a wildcard.  When you make a repository with Github, you can use their [default Python .gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore) to start you off.
-
-Further Reading
---------------------
-1. [Setuptools documentation](https://setuptools.pypa.io/en/latest/setuptools.html)
-2. [Pytest Documentation](https://docs.pytest.org/en/stable/)
-3. [Cython Compilation Guide](https://cython.readthedocs.io/en/stable/src/userguide/source_files_and_compilation.html)
