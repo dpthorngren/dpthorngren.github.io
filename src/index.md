@@ -10,7 +10,7 @@ Daniel Thorngren
 ====================
 <center>
 Assistant Research Scientist<br>
-Physics and Astronomy, Johns Hopkins University<br>
+Physics and Astronomy, Johns&nbsp;Hopkins&nbsp;University<br>
 <dpthorngren@jhu.edu><br>
 [Publications (ADS)](https://ui.adsabs.harvard.edu/search/q=Thorngren%2C%20Daniel%20property%3Arefereed)<br>
 [Github](https://github.com/dpthorngren)<br>
@@ -19,9 +19,11 @@ Physics and Astronomy, Johns Hopkins University<br>
 
 Education
 --------------------
-Physics BS (Highest Honors), UC Davis (2009-2013)<br>
-Physics MS, UC Santa Cruz (2015)<br>
-Physics PhD, UC Santa Cruz (2013-2019)
+<div class=education>
+- Physics BS (Highest Honors), UC&nbsp;Davis&nbsp;(2009-2013)<br>
+- Physics MS, UC&nbsp;Santa&nbsp;Cruz&nbsp;(2015)<br>
+- Physics PhD, UC&nbsp;Santa&nbsp;Cruz&nbsp;(2013-2019)
+</div>
 
 Research Interests
 --------------------

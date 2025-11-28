@@ -75,6 +75,19 @@ div.sourceCode, pre.verbatim {
     font-size: 12pt;
 }
 
+div.education {
+    text-align: left;
+}
+
+div.education > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.8em;
+    text-indent: -1em;
+}
+
 .cell {
     margin: 2pt 0pt;
     overflow: hidden;
@@ -108,6 +121,7 @@ table {
 
 #nav {
     text-decoration: none;
+    margin-right: 2em
 }
 
 #nav:hover {
@@ -136,7 +150,7 @@ table {
 #portrait {
     display: inline-flex;
     float: right;
-    max-width: 35%;
+    max-width: 34%;
     height: auto;
     border: 2px solid black;
     border-radius: 5px;
@@ -152,8 +166,20 @@ table {
 
 /* Overrides for narrow screens */
 @media screen and (max-width: 720px) {
+    body {
+        width: 80%;
+    }
+
     html {
         background-size: contain;
+    }
+
+    h1 {
+        font-size: 26pt;
+    }
+
+    h2 {
+        font-size: 20pt;
     }
 
     #sideimg {
@@ -170,5 +196,21 @@ table {
 
     #nav {
         font-size: 16pt;
+        margin-right: 20pt;
+    }
+
+    #logo {
+        height: 16pt;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #nav {
+        font-size: 14pt;
+        margin-right: 4pt;
+
+    }
+    #logo {
+        height: 14pt;
     }
 }
