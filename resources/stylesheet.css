@@ -179,10 +179,11 @@ table {
     }
 
     h2 {
-        font-size: 20pt;
+        font-size: 18pt;
     }
 
     #sideimg {
+        max-width: 65%;
         display: block;
         float: none;
         margin: auto;
@@ -205,6 +206,10 @@ table {
 }
 
 @media screen and (max-width: 480px) {
+    #sideimg {
+        max-width: 80%;
+    }
+
     #nav {
         font-size: 14pt;
         margin-right: 4pt;
